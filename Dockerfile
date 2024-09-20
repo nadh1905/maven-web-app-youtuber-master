@@ -1,4 +1,4 @@
 FROM tomcat
-LABEL maintainer address "koti"
-COPY **/*.war /usr/local/tomcat/webapps
+WORKDIR /usr/local/tomcat/webapps
+COPY **/*.war .
 CMD ["catalina.sh","run"]
